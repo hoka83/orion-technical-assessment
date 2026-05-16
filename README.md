@@ -39,7 +39,7 @@ Top 10 Products by Sales (Bar Chart)
 Forecast vs Actual 2009 by Brand (Clustered Bar)
 Customer Purchase Behavior (Matrix: Customer x Category)
 Slicers: Country, State
-![PowerBI Dashboard](dashboard%20Screenshot.png)
+![PowerBI Dashboard](dashboard%20screenshot.png)
 ________________________________________________________
 # Key Assumptions
 
