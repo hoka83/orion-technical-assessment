@@ -1,12 +1,12 @@
 Project Overview
 End-to-end data pipeline and Power BI dashboard analyzing retail sales data (2008–2009) across products, customers, and geographies. The solution covers ETL, data modeling, DAX measures, and interactive visualizations.
--------------------------------------------------------
+________________________________________________________
 
 ETL Pipeline (etl_orion.py)
 How to Run
 bash# Install dependencies
 pip install ijson pandas numpy
--------------------------------------------------------
+________________________________________________________
 # Place Sales.json in data/ folder, then run
 python etl_orion.py
 What it does
@@ -18,18 +18,15 @@ CustomerName null in 90% of records — filled with "Unknown" where unresolvable
 OrderDate format M/D/YYYY parsed to proper datetime
 Invalid prices/quantities (≤ 0) excluded from fact_sales
 CustomerCode stored as Text to preserve alphanumeric values (e.g. CSxxx)
--------------------------------------------------------
+________________________________________________________
 
 Data Model
 Star schema with fact_sales at the center:
-dim_date ──────────────┐
-dim_product ───────────┤──── fact_sales
-dim_customer ──────────┘
 
 fact_forecast (linked via TREATAS DAX — no physical relationship)
 ![Data Model](Data%20model%20Screenshot.png)
 
--------------------------------------------------------
+________________________________________________________
 Power BI Dashboard
 DAX Measures
 MeasureDescriptionTotal SalesSUM of SalesAmountSales 2008 / 2009Year-filtered salesYoY Growth %(2009 - 2008) / 2008Total Forecast 2009TREATAS to match Brand without relationshipForecast Achievement %Actual / Forecast ratioTop Customer NameTOPN(1) excluding Unknown
