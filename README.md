@@ -5,7 +5,8 @@ ________________________________________________________
 # ETL Pipeline (etl_orion.py)
 How to Run
 bash# Install dependencies
-pip install ijson pandas numpy
+- pip install ijson pandas numpy
+- python etl_orion.py
 ________________________________________________________
 # Place Sales.json in data/ folder, then run
 python etl_orion.py
